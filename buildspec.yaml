@@ -10,7 +10,7 @@ phases:
       - chmod +x ./kubectl
       - mv ./kubectl /usr/local/bin/kubectl
       - mkdir ~/.kube
-      #- aws eks --region ap-northeast-2 update-kubeconfig --name eks
+      #- aws eks --region ap-northeast-2 update-kubeconfig --name eks  수정
       - aws eks update-kubeconfig --name eks-demo-edu006 --region ap-northeast-2
       - kubectl get po -n kube-system
   pre_build:
